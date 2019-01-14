@@ -89,7 +89,7 @@ namespace Conference.DataStore.Azure
                 var path = $"syncstore{dbId}.db";
                 // Old app service from the app-conference demo. Check: https://github.com/xamarinhq/app-conference for more information
                 //MobileService = new MobileServiceClient ("https://xamarinevolveappdemo.azurewebsites.net");
-                MobileService = new MobileServiceClient("https://megsoftconference.azurewebsites.net/");
+                MobileService = new MobileServiceClient("https://megsoftconference.azurewebsites.net");
                 store = new MobileServiceSQLiteStore (path);
                 store.DefineTable<Category> ();
                 store.DefineTable<Favorite> ();

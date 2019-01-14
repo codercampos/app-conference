@@ -14,9 +14,9 @@ namespace Conference.Backend.Helpers
 
             var claimType = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier";
 
-            return (from c in claims
+            return /*(from c in claims
                     where c.Type == claimType
-                    select c.Value).Single();
+                    select c.Value).Single();*/ string.Empty;
         }
 
         public static string GetAuthenticatedUserEmail(HttpRequestContext context)
@@ -26,9 +26,9 @@ namespace Conference.Backend.Helpers
 
             var claimType = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier";
 
-            return (from c in claims
+            return /*(from c in claims
                     where c.Type == claimType
-                    select c.Value).Single();
+                    select c.Value).Single();*/string.Empty;
         }
     }
 }
