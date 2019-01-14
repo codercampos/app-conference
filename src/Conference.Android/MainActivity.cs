@@ -26,6 +26,7 @@ using Xamarin;
 //using Gcm;
 //using Gcm.Client;
 using Conference.Droid.Notifications;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace Conference.Droid
 {
@@ -65,8 +66,6 @@ namespace Conference.Droid
                 }
             };
 #endif
-
-
             LoadApplication (new App ());
 
             var gpsAvailable = IsPlayServicesAvailable ();

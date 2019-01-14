@@ -2,6 +2,7 @@
 ## Eclipse
 #################
 
+.mfractor/
 *.pydevproject
 .project
 .metadata
