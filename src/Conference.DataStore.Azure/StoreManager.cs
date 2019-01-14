@@ -87,7 +87,9 @@ namespace Conference.DataStore.Azure
                 IsInitialized = true;
                 var dbId = Settings.DatabaseId;
                 var path = $"syncstore{dbId}.db";
-                MobileService = new MobileServiceClient ("https://xamarinevolveappdemo.azurewebsites.net");
+                // Old app service from the app-conference demo. Check: https://github.com/xamarinhq/app-conference for more information
+                //MobileService = new MobileServiceClient ("https://xamarinevolveappdemo.azurewebsites.net");
+                MobileService = new MobileServiceClient("https://megsoftconference.azurewebsites.net/");
                 store = new MobileServiceSQLiteStore (path);
                 store.DefineTable<Category> ();
                 store.DefineTable<Favorite> ();

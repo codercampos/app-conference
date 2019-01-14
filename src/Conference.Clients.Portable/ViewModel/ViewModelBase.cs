@@ -19,7 +19,7 @@ namespace Conference.Clients.Portable
             Navigation = navigation;
         }
 
-        public static void Init (bool mock = true)
+        public static void Init (bool mock = false)
         {
 
 #if ENABLE_TEST_CLOUD && !DEBUG
