@@ -45,7 +45,6 @@ namespace Conference.Backend
                 });
             }
 
-           
 
             app.UseWebApi(config);
       
