@@ -4,10 +4,6 @@
 <dict>
 	<key>CFBundleIdentifier</key>
 	<string>com.sample.conference</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -48,7 +44,7 @@
 	<string>Needed for access to photos for profile.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app needs access to the camera to take photos.</string>
-  	<key>NSRemindersUsageDescription</key>
+	<key>NSRemindersUsageDescription</key>
 	<string>Add reminders for events.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This app needs access to microphone.</string>
@@ -93,5 +89,9 @@
 	<string>Conference16</string>
 	<key>CFBundleDisplayName</key>
 	<string>Conference16</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>2.0.0</string>
 </dict>
 </plist>

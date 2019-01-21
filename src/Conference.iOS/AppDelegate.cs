@@ -17,6 +17,9 @@ using Social;
 using CoreSpotlight;
 using Conference.DataStore.Abstractions;
 using System.Threading.Tasks;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace Conference.iOS
 {
@@ -93,7 +96,8 @@ namespace Conference.iOS
 
             NSNotificationCenter.DefaultCenter.AddObserver(UIApplication.DidBecomeActiveNotification, DidBecomeActive);
 
-
+            AppCenter.Start("02653bb5-812e-4a57-b187-7fb76d64cfed",
+                typeof(Analytics), typeof(Crashes));            
 
             return base.FinishedLaunching(app, options);
         }
