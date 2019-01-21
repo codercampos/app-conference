@@ -22,6 +22,7 @@ namespace Conference.DataStore.Azure
         public override async Task<IEnumerable<Notification>> GetItemsAsync(bool forceRefresh = false)
         {
             var server = await base.GetItemsAsync (forceRefresh).ConfigureAwait (false);
+           
             if (server.Count () == 0) 
             {
                 var items = new []

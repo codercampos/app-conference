@@ -15,8 +15,7 @@ using Conference.Clients.Portable;
 namespace Conference.DataStore.Azure
 {
     public class StoreManager : IStoreManager
-    {
-        
+    {      
         public static MobileServiceClient MobileService { get; set; }
 
         /// <summary>
@@ -68,9 +67,6 @@ namespace Conference.DataStore.Azure
             IsInitialized = false;
             return Task.FromResult(true);
         }
-
-
-
 
         public bool IsInitialized { get; private set; }
         #region IStoreManager implementation
