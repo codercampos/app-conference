@@ -1,9 +1,7 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
-
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -26,38 +24,40 @@ using Xamarin;
 //using Gcm;
 //using Gcm.Client;
 using Conference.Droid.Notifications;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Microsoft.WindowsAzure.MobileServices;
 
 namespace Conference.Droid
 {
-    
-
-    [Activity(Label = "Conference16", 
-        Name="com.sample.conference.MainActivity",
+    [Activity(Label = "Conference16",
+        Name = "com.sample.conference.MainActivity",
         Exported = true,
-        Icon = "@drawable/newicon", 
-        LaunchMode = LaunchMode.SingleTask, 
+        Icon = "@drawable/newicon",
+        LaunchMode = LaunchMode.SingleTask,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : FormsAppCompatActivity
     {
-        protected override void OnCreate (Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             ToolbarResource = Resource.Layout.toolbar;
             TabLayoutResource = Resource.Layout.tabs;
 
-            base.OnCreate (savedInstanceState);
+            base.OnCreate(savedInstanceState);
 
-            Forms.Init (this, savedInstanceState);
+            Forms.Init(this, savedInstanceState);
             FormsMaps.Init(this, savedInstanceState);
-           
-            Toolkit.Init ();
-            
-            PullToRefreshLayoutRenderer.Init ();
-            typeof (Color).GetProperty ("Accent", BindingFlags.Public | BindingFlags.Static).SetValue (null, Color.FromHex ("#757575"));
 
-            ImageCircle.Forms.Plugin.Droid.ImageCircleRenderer.Init ();
+            Toolkit.Init();
 
-            ZXing.Net.Mobile.Forms.Android.Platform.Init ();
+            PullToRefreshLayoutRenderer.Init();
+            typeof(Color).GetProperty("Accent", BindingFlags.Public | BindingFlags.Static)
+                .SetValue(null, Color.FromHex("#757575"));
+
+            ImageCircle.Forms.Plugin.Droid.ImageCircleRenderer.Init();
+
+            ZXing.Net.Mobile.Forms.Android.Platform.Init();
 #if ENABLE_TEST_CLOUD
             //Mapping StyleID to element content descriptions
             Xamarin.Forms.Forms.ViewInitialized += (object sender, Xamarin.Forms.ViewInitializedEventArgs e) => {
@@ -66,18 +66,17 @@ namespace Conference.Droid
                 }
             };
 #endif
-            LoadApplication (new App ());
+            LoadApplication(new App());
 
-            var gpsAvailable = IsPlayServicesAvailable ();
+            var gpsAvailable = IsPlayServicesAvailable();
             Settings.Current.PushNotificationsEnabled = gpsAvailable;
 
-            OnNewIntent (Intent);
+            OnNewIntent(Intent);
 
 
-            if(!string.IsNullOrWhiteSpace(Intent?.Data?.LastPathSegment))
+            if (!string.IsNullOrWhiteSpace(Intent?.Data?.LastPathSegment))
             {
-
-                switch(Intent.Data.LastPathSegment)
+                switch (Intent.Data.LastPathSegment)
                 {
                     case "sessions":
                         MessagingService.Current.SendMessage<DeepLinkPage>("DeepLinkPage", new DeepLinkPage
@@ -104,15 +103,15 @@ namespace Conference.Droid
                 return;
 #if ENABLE_TEST_CLOUD
 #else
-            RegisterWithGCM ();
+            RegisterWithGCM();
 #endif
 
-            DataRefreshService.ScheduleRefresh (this);
+            DataRefreshService.ScheduleRefresh(this);
+            AppCenter.Start("2703219e-0c70-407e-8008-d9853cf66dcb",
+                typeof(Analytics), typeof(Crashes));
         }
 
 
-
-        
         private void RegisterWithGCM()
         {
             // Check to ensure everything's set up right
@@ -127,9 +126,9 @@ namespace Conference.Droid
             //GcmService.Register(this);
         }
 
-        public bool IsPlayServicesAvailable ()
+        public bool IsPlayServicesAvailable()
         {
-            int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable (this);
+            int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
             if (resultCode != ConnectionResult.Success)
             {
                 if (GoogleApiAvailability.Instance.IsUserResolvableError(resultCode))
@@ -138,12 +137,15 @@ namespace Conference.Droid
                         return false;
 
                     Settings.Current.GooglePlayChecked = true;
-                    Toast.MakeText(this, "Google Play services is not installed, push notifications have been disabled.", ToastLength.Long).Show();
+                    Toast.MakeText(this,
+                        "Google Play services is not installed, push notifications have been disabled.",
+                        ToastLength.Long).Show();
                 }
                 else
                 {
                     Settings.Current.PushNotificationsEnabled = false;
                 }
+
                 return false;
             }
             else
@@ -153,12 +155,12 @@ namespace Conference.Droid
             }
         }
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions,
+            Permission[] grantResults)
         {
-            global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult (requestCode, permissions, grantResults);
+            global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions,
+                grantResults);
             PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-
     }
 }
-

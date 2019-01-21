@@ -93,7 +93,8 @@ namespace Conference.DataObjects
 
         [Newtonsoft.Json.JsonIgnore]
         public DateTime StartTimeOrderBy { get { return StartTime.HasValue ? StartTime.Value : DateTime.MinValue; } }
-        const string delimiter = "|";
+        
+        const string delimiter = "|";        
         string haystack;
         [Newtonsoft.Json.JsonIgnore]
         public string Haystack
@@ -120,7 +121,8 @@ namespace Conference.DataObjects
                 return haystack;
             }
         }
-        bool isFavorite;
+        
+        bool isFavorite; 
         [Newtonsoft.Json.JsonIgnore]
         public bool IsFavorite
         {
@@ -131,7 +133,7 @@ namespace Conference.DataObjects
             }
         }
 
-        bool feedbackLeft;
+        bool feedbackLeft;        
         [Newtonsoft.Json.JsonIgnore]
         public bool FeedbackLeft
         {
