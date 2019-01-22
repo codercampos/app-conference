@@ -28,7 +28,8 @@
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
+    <CodesignProvision>VS: com.megsoft.caribbeandevconf Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <Optimize>true</Optimize>
@@ -43,7 +44,7 @@
     <IpaPackageName>
     </IpaPackageName>
     <DefineConstants>MOBILE</DefineConstants>
-    <CodesignProvision>Megsoft Wildcard Dev Profile</CodesignProvision>
+    <CodesignProvision>VS: com.megsoft.caribbeandevconf Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <Optimize>true</Optimize>
@@ -54,8 +55,9 @@
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
     <DefineConstants>ENABLE_TEST_CLOUD;MOBILE</DefineConstants>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
     <MtouchSdkVersion>12.1</MtouchSdkVersion>
+    <CodesignProvision>VS: com.megsoft.caribbeandevconf Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,10 +71,11 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchProfiling>true</MtouchProfiling>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <IpaPackageName>
     </IpaPackageName>
+    <CodesignProvision>VS: com.megsoft.caribbeandevconf Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -82,29 +85,30 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
     <DefineConstants>ENABLE_TEST_CLOUD;MOBILE</DefineConstants>
+    <CodesignProvision>VS: com.megsoft.caribbeandevconf Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UITest|iPhone' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\UITest</OutputPath>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
     <DefineConstants>ENABLE_TEST_CLOUD;MOBILE</DefineConstants>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <IpaPackageName>
     </IpaPackageName>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <BuildIpa>true</BuildIpa>
-    <CodesignProvision>Automatic:InHouse</CodesignProvision>
+    <CodesignProvision>VS: com.megsoft.caribbeandevconf Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UITest|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\UITest</OutputPath>
     <WarningLevel>4</WarningLevel>
     <DefineConstants>ENABLE_TEST_CLOUD;MOBILE</DefineConstants>
-    <CodesignProvision>Automatic:InHouse</CodesignProvision>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>VS: com.megsoft.caribbeandevconf Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'UITest|iPhoneSimulator' ">
     <Optimize>false</Optimize>
@@ -112,13 +116,16 @@
     <WarningLevel>4</WarningLevel>
     <MtouchLink>None</MtouchLink>
     <DefineConstants>ENABLE_TEST_CLOUD;MOBILE</DefineConstants>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
+    <CodesignProvision>VS: com.megsoft.caribbeandevconf Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DocumentationFile>bin\Debug\ConferenceiOS.XML</DocumentationFile>
     <OutputPath>bin\Debug</OutputPath>
     <WarningLevel>4</WarningLevel>
     <Optimize>false</Optimize>
+    <CodesignProvision>VS: com.megsoft.caribbeandevconf Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
