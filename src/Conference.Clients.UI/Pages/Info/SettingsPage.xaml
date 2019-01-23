@@ -126,7 +126,7 @@
                                     <On Platform="UWP" Value="16,8"/>
                                 </OnPlatform>
                             </StackLayout.Padding>
-                            <Label Text="Copyright 2016 - Xamarin Inc." 
+                            <Label Text="Copyright 2019 - Megsoft Consulting, Inc." 
                                    Style="{DynamicResource ConferenceListItemDetailTextStyle}"/>
                         </StackLayout>
                     </StackLayout>

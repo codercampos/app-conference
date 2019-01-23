@@ -19,7 +19,8 @@ namespace Conference.Clients.UI
         {
             base.OnAppearing();
 
-            CodeOfConductText.Text = CodeOfConductPage.Conduct;
+            CodeOfConductText.FormattedText = CodeOfConductPage.Conduct;
+
             await vm.UpdateConfigs();
         }
     }

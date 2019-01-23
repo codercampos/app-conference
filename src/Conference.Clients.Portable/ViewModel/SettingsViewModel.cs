@@ -35,11 +35,8 @@ namespace Conference.Clients.Portable
 
             AboutItems.AddRange(new []
                 {
-                    new MenuItem { Name = "Created by Xamarin with <3", Command=LaunchBrowserCommand, Parameter="http://www.xamarin.com" },
-                    new MenuItem { Name = "Open source on GitHub!", Command=LaunchBrowserCommand, Parameter="http://tiny.cc/app-conference"},
-                    new MenuItem { Name = "Terms of Use", Command=LaunchBrowserCommand, Parameter="https://store.xamarin.com/terms"},
-                    new MenuItem { Name = "Privacy Policy", Command=LaunchBrowserCommand, Parameter="http://xamarin.com/privacy"},
-                    new MenuItem { Name = "Open Source Notice", Command=LaunchBrowserCommand, Parameter="http://tiny.cc/app-conference-osn"}
+                    new MenuItem { Name = "Created by Megsoft Consulting, Inc", Command=LaunchBrowserCommand, Parameter="https://megsoftconsulting.com/" },
+                    new MenuItem { Name = "Open source on GitHub!", Command=LaunchBrowserCommand, Parameter="https://github.com/megsoftconsulting/app-conference"},
                 });
 
             TechnologyItems.AddRange(new []
