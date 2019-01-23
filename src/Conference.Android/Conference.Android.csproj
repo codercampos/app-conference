@@ -460,4 +460,9 @@
       <Version>2.4.1</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\Conference.Clients.Portable\App.config">
+      <Link>Assets\App.config</Link>
+    </AndroidAsset>
+  </ItemGroup>
 </Project>
