@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using PCLAppConfig;
 
 namespace Conference.iOS
 {
@@ -99,6 +100,9 @@ namespace Conference.iOS
             AppCenter.Start("02653bb5-812e-4a57-b187-7fb76d64cfed",
                 typeof(Analytics), typeof(Crashes));            
 
+            ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
+
+            
             return base.FinishedLaunching(app, options);
         }
 

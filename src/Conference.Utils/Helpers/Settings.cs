@@ -32,7 +32,7 @@ namespace Conference.Clients.Portable
         }
 
         const string WiFiSSIDKey = "ssid_key";
-        readonly string WiFiSSIDDefault = "Xamarin_Conference";
+        readonly string WiFiSSIDDefault = "CaribbeanDevConf";
         public string WiFiSSID
         {
             get => Preferences.Get(WiFiSSIDKey, WiFiSSIDDefault);

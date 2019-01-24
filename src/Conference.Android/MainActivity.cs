@@ -28,6 +28,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.WindowsAzure.MobileServices;
+using PCLAppConfig;
 
 namespace Conference.Droid
 {
@@ -66,6 +67,7 @@ namespace Conference.Droid
                 }
             };
 #endif
+            ConfigurationManager.Initialise(PCLAppConfig.FileSystemStream.PortableStream.Current);
             LoadApplication(new App());
 
             var gpsAvailable = IsPlayServicesAvailable();
@@ -109,6 +111,7 @@ namespace Conference.Droid
             DataRefreshService.ScheduleRefresh(this);
             AppCenter.Start("2703219e-0c70-407e-8008-d9853cf66dcb",
                 typeof(Analytics), typeof(Crashes));
+
         }
 
 
