@@ -50,7 +50,7 @@
                    StyleId="SessionTime"/>
 
             
-            <local:FavoriteImage  StyleId="FavoriteButton"
+            <local:FavoriteImage  StyleId="FavoriteButton" IsVisible="False"
                     Grid.Column="2" 
                     Grid.Row="0"
                     Source="{Binding IsFavorite, Converter={StaticResource IsFilledIconConverter}, ConverterParameter='heart'}"

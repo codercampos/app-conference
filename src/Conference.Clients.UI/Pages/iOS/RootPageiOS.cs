@@ -25,8 +25,6 @@ namespace Conference.Clients.UI
             NavigationPage.SetHasNavigationBar(this, false);
             Children.Add(new ConferenceNavigationPage(new FeedPage()));
             Children.Add(new ConferenceNavigationPage(new SessionsPage()));
-            Children.Add(new ConferenceNavigationPage(new EventsPage()));
-            Children.Add(new ConferenceNavigationPage(new MiniHacksPage()));
             Children.Add(new ConferenceNavigationPage(new AboutPage()));
 
             MessagingService.Current.Subscribe<DeepLinkPage>("DeepLinkPage", async (m, p) =>
@@ -37,14 +35,6 @@ namespace Conference.Clients.UI
                             NavigateAsync(AppPage.Notification);
                             await CurrentPage.Navigation.PopToRootAsync();
                             await CurrentPage.Navigation.PushAsync(new NotificationsPage());
-                            break;
-                        case AppPage.Events:
-                            NavigateAsync(AppPage.Events);
-                            await CurrentPage.Navigation.PopToRootAsync();
-                            break;
-                        case AppPage.MiniHacks:
-                            NavigateAsync(AppPage.MiniHacks);
-                            await CurrentPage.Navigation.PopToRootAsync();
                             break;
                         case AppPage.Session:
                             NavigateAsync(AppPage.Sessions);

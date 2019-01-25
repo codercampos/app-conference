@@ -6042,23 +6042,14 @@ namespace Conference.Droid
 			// aapt resource value: 0x7f0c0033
 			public const int multiply = 2131492915;
 			
-			// aapt resource value: 0x7f0c00e3
-			public const int nav_conference_info = 2131493091;
-			
 			// aapt resource value: 0x7f0c00e0
-			public const int nav_evals = 2131493088;
-			
-			// aapt resource value: 0x7f0c00dd
-			public const int nav_events = 2131493085;
+			public const int nav_conference_info = 2131493088;
 			
 			// aapt resource value: 0x7f0c00db
 			public const int nav_feed = 2131493083;
 			
-			// aapt resource value: 0x7f0c00e2
-			public const int nav_floor_map = 2131493090;
-			
-			// aapt resource value: 0x7f0c00de
-			public const int nav_mini_hacks = 2131493086;
+			// aapt resource value: 0x7f0c00df
+			public const int nav_floor_map = 2131493087;
 			
 			// aapt resource value: 0x7f0c00da
 			public const int nav_section_main = 2131493082;
@@ -6066,14 +6057,14 @@ namespace Conference.Droid
 			// aapt resource value: 0x7f0c00dc
 			public const int nav_sessions = 2131493084;
 			
-			// aapt resource value: 0x7f0c00e4
-			public const int nav_settings = 2131493092;
-			
-			// aapt resource value: 0x7f0c00df
-			public const int nav_sponsors = 2131493087;
-			
 			// aapt resource value: 0x7f0c00e1
-			public const int nav_venue = 2131493089;
+			public const int nav_settings = 2131493089;
+			
+			// aapt resource value: 0x7f0c00dd
+			public const int nav_sponsors = 2131493085;
+			
+			// aapt resource value: 0x7f0c00de
+			public const int nav_venue = 2131493086;
 			
 			// aapt resource value: 0x7f0c00c0
 			public const int nav_view = 2131493056;

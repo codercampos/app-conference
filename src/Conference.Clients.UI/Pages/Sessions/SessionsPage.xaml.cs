@@ -53,7 +53,7 @@ namespace Conference.Clients.UI
                     await NavigationService.PushModalAsync(Navigation, new ConferenceNavigationPage(new FilterSessionsPage()));
                 });
 
-            ToolbarItems.Add(filterItem);
+//            ToolbarItems.Add(filterItem);
 
             ListViewSessions.ItemSelected += async (sender, e) => 
                 {

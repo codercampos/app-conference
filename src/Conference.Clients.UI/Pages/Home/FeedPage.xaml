@@ -75,7 +75,7 @@
                 </StackLayout>
             </local:CardView>
 
-            <local:CardView>
+            <local:CardView IsVisible="False">
                  <!--Upcoming Sessions-->
                  <StackLayout Spacing="0">
                     <Grid>
