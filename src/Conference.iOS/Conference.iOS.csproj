@@ -212,6 +212,9 @@
     <BundleResource Include="Resources\floor_2.png" />
     <BundleResource Include="Resources\floor_2%402x.png" />
     <BundleResource Include="Resources\floor_2%403x.png" />
+    <BundleResource Include="Resources\floor_map.png" />
+    <BundleResource Include="Resources\floor_map%402x.png" />
+    <BundleResource Include="Resources\floor_map%403x.png" />        
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
