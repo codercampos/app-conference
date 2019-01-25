@@ -162,6 +162,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\newicon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\newicon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\newicon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\floor_map.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\floor_map.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\floor_map.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\floor_map.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\floor_map.png" />    
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\toolbar.axml" />

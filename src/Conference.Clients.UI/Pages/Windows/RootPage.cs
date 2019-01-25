@@ -26,7 +26,7 @@ namespace Conference.Clients.UI
                 new MenuItem { Name = "Sponsors", Icon = "menu_sponsors.png", Page = AppPage.Sponsors },
                 new MenuItem { Name = "Evaluations", Icon = "menu_evals.png", Page = AppPage.Evals },
                 new MenuItem { Name = "Venue", Icon = "menu_venue.png", Page = AppPage.Venue },
-                new MenuItem { Name = "Floor Maps", Icon = "menu_plan.png", Page = AppPage.FloorMap },
+                new MenuItem { Name = "Floor Map", Icon = "menu_plan.png", Page = AppPage.FloorMap },
                 new MenuItem { Name = "Conference Info", Icon = "menu_info.png", Page = AppPage.ConferenceInfo },
                 new MenuItem { Name = "Settings", Icon = "menu_settings.png", Page = AppPage.Settings }
             };

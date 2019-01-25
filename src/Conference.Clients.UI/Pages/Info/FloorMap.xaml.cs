@@ -42,12 +42,7 @@ namespace Conference.Clients.UI
 
             try
             {
-                MainImage.Source = new UriImageSource
-                {
-                    Uri = new Uri(data.Url),
-                    CachingEnabled = true,
-                    CacheValidity = TimeSpan.FromDays(3)
-                };
+                MainImage.Source = data?.Local;
             }
             catch (Exception ex)
             {

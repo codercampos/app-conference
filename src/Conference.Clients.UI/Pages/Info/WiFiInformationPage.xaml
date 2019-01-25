@@ -27,7 +27,7 @@
                     <StackLayout Spacing="0" StyleId="2.4GHzCard">
                         <local:LabelSection Text="Wi-Fi Configuration" />
                         <local:HeaderDivider />
-                        <StackLayout Padding="{StaticResource StandardPadding}">
+                        <StackLayout Padding="{StaticResource StandardPadding}" BackgroundColor="White">
                             <Label Style="{DynamicResource ConferenceListItemTextStyle}"
                                    StyleId="CodeOfConductText"
                                    Text="Wifi configuration details will be available once the conference starts" />
