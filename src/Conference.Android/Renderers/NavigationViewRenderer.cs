@@ -109,9 +109,6 @@ namespace Conference.Droid
                 case Resource.Id.nav_sessions:
                     id = (int)AppPage.Sessions;
                     break;
-                case Resource.Id.nav_events:
-                    id = (int)AppPage.Events;
-                    break;
                 case Resource.Id.nav_sponsors:
                     id = (int)AppPage.Sponsors;
                     break;
@@ -124,14 +121,8 @@ namespace Conference.Droid
                 case Resource.Id.nav_conference_info:
                     id = (int)AppPage.ConferenceInfo;
                     break;
-                case Resource.Id.nav_mini_hacks:
-                    id = (int)AppPage.MiniHacks;
-                    break;
                 case Resource.Id.nav_settings:
                     id = (int)AppPage.Settings;
-                    break;
-                case Resource.Id.nav_evals:
-                    id = (int)AppPage.Evals;
                     break;
             }
             this.Element.OnNavigationItemSelected(new Conference.Clients.UI.NavigationItemSelectedEventArgs

@@ -99,28 +99,29 @@ namespace Conference.Clients.UI
                     var result = await task;
                     q?.OnCompleted?.Invoke(result);
                 });
-
-            MessagingService.Current.Subscribe(MessageKeys.NavigateLogin, async m =>
-                {
-                    if(Device.RuntimePlatform == Device.Android)
-                    {
-                        ((RootPageAndroid)MainPage).IsPresented = false;
-                    }
-
-                    Page page = null;
-                    if(Settings.Current.FirstRun && Device.RuntimePlatform == Device.Android)
-                        page = new LoginPage();
-                    else
-                        page = new ConferenceNavigationPage(new LoginPage());
-
-                   
-                    var nav = Application.Current?.MainPage?.Navigation;
-                    if(nav == null)
-                        return;
-                   
-                    await NavigationService.PushModalAsync(nav, page);
-
-                });
+            
+// Commented out until the login service is fixed.
+//            MessagingService.Current.Subscribe(MessageKeys.NavigateLogin, async m =>
+//                {
+//                    if(Device.RuntimePlatform == Device.Android)
+//                    {
+//                        ((RootPageAndroid)MainPage).IsPresented = false;
+//                    }
+//
+//                    Page page = null;
+//                    if(Settings.Current.FirstRun && Device.RuntimePlatform == Device.Android)
+//                        page = new LoginPage();
+//                    else
+//                        page = new ConferenceNavigationPage(new LoginPage());
+//
+//                   
+//                    var nav = Application.Current?.MainPage?.Navigation;
+//                    if(nav == null)
+//                        return;
+//                   
+//                    await NavigationService.PushModalAsync(nav, page);
+//
+//                });
 
             try
             {

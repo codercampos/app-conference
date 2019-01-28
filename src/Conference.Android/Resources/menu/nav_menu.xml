@@ -11,15 +11,6 @@
             android:id="@+id/nav_sessions"
             android:icon="@drawable/menu_sessions"
             android:title="Sessions"/>
-        <item
-            android:id="@+id/nav_events"
-            android:icon="@drawable/menu_events"
-            android:title="Events" />
-
-        <item
-            android:title="Mini-hacks"
-            android:icon="@drawable/menu_hacks"
-            android:id="@+id/nav_mini_hacks" />
     </group>
 
      <item android:title="Information" >
@@ -29,11 +20,6 @@
                 android:id="@+id/nav_sponsors"
                 android:icon="@drawable/menu_sponsors"
                 android:title="Sponsors"
-                android:checkable="true" />
-            <item
-                android:id="@+id/nav_evals"
-                android:icon="@drawable/menu_evals"
-                android:title="Evaluations"
                 android:checkable="true" />
             <item
                 android:id="@+id/nav_venue"

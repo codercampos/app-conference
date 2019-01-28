@@ -28,7 +28,6 @@ namespace Conference.Clients.Portable
             InfoItems.AddRange(new []
                 {
                     new MenuItem { Name = "Sponsors", Icon = "icon_venue.png", Parameter="sponsors"},
-                    new MenuItem { Name = "Evaluations", Icon = "icon_venue.png", Parameter="evaluations"},
                     new MenuItem { Name = "Venue", Icon = "icon_venue.png", Parameter = "venue"},
                     new MenuItem { Name = "Conference Floor Map", Icon = "icon_venue.png", Parameter = "floor-maps"},
                     new MenuItem { Name = "Code of Conduct", Icon = "icon_code_of_conduct.png", Parameter="code-of-conduct" },

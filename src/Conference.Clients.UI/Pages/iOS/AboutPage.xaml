@@ -9,9 +9,6 @@
              Icon="tab_about.png"
              NavigationPage.BackButtonTitle="Info"
              BackgroundColor="{DynamicResource WindowBackgroundTable}">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding LoginCommand}" Text="{Binding LoginText}"/>
-    </ContentPage.ToolbarItems>
     <local:AlwaysScrollView  Grid.RowSpan="2">
         <StackLayout Spacing="0"> 
          
@@ -22,7 +19,7 @@
                 Padding="{DynamicResource CardPadding}">
 
              
-               <local:CardView>
+               <local:CardView IsVisible="False">
                      <StackLayout Spacing="0">
                         <local:LabelSection Text="My Account"/>
                         <local:HeaderDivider/>
@@ -45,7 +42,7 @@
                     </StackLayout>
                 </local:CardView>
 
-                <local:CardView Padding="0,32,0,0">
+                <local:CardView Padding="0,32,0,0" IsVisible="False">
                      <StackLayout Spacing="0">
                         <local:HeaderDivider/>
                         <Grid Padding="16,0" BackgroundColor="White">

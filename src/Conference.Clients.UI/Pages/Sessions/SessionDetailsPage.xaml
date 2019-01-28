@@ -90,7 +90,7 @@
                         </StackLayout>
                     </local:CardView>
 
-				<local:CardView IsVisible="{Binding Session, Converter={StaticResource RatingVisibleConverter}}">
+				<local:CardView IsVisible="False">
                         <StackLayout Spacing="0">
                             <!--Rate-->
                             <local:LabelSection Text="Leave Feedback" StyleId="FeedbackTitle"/>
@@ -150,11 +150,12 @@
                                </Grid.IsVisible>
                                 <Button StyleId="ReminderButton"
                                         IsVisible="{Binding ShowReminder}"
-                                        Text="{Binding IsReminderSet, Converter={StaticResource HasReminderTextConverter}"
+                                        Text="{Binding IsReminderSet, Converter={StaticResource HasReminderTextConverter}}"
                                         BackgroundColor="{StaticResource PrimaryDark}"
                                         Command="{Binding ReminderCommand}"
                                         TextColor="White"/>
                                 <Button Grid.Row="1"
+                                        IsVisible="False"
                                         StyleId="FavoriteButton"
                                         x:Name="FavoriteButtonAndroid"
                                         Text="{Binding Session.IsFavorite, Converter={StaticResource IsFavoriteDetailTextConverter}}"
@@ -163,6 +164,7 @@
                                         TextColor="White"/>
 
                                  <local:FavoriteImage StyleId="FavoriteIcon"
+                                                      IsVisible="False"
                                         x:Name="FavoriteIconAndroid"
                                         Source="{Binding Session.IsFavorite, Converter={StaticResource IsFilledIconConverter}, ConverterParameter='heart'}"
                                         Grid.Row="1" Grid.Column="1">
@@ -196,11 +198,11 @@
                                 <StackLayout.IsVisible>
                                 <OnPlatform x:TypeArguments="x:Boolean">
                                     <On Platform="Android" Value="false"/>
-                                    <On Platform="iOS" Value="true"/>
+                                    <On Platform="iOS" Value="false"/>
                                     <On Platform="UWP" Value="false"/>
                                 </OnPlatform>
                             </StackLayout.IsVisible>
-                                <Button 
+                                <Button
                                     StyleId="FavoriteButton"
                                     x:Name="FavoriteButtoniOS"
                                     Text="{Binding Session.IsFavorite, Converter={StaticResource IsFavoriteDetailTextConverter}}"
