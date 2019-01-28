@@ -10,12 +10,13 @@ namespace Conference.Clients.Portable
     public class VenueViewModel : ViewModelBase
     {
         public bool CanMakePhoneCall => true;
-        public string EventTitle => "Conference";
-        public string LocationTitle => "Hyatt Regency Orlando";
-        public string Address1 => "9801 International Drive";
-        public string Address2 => "Orlando, FL 32819";
-        public double Latitude => 28.427015;
-        public double Longitude => -81.467563;
+        public string EventTitle => "CaribbeanDevConf";
+        public string LocationTitle => "Hard Rock Hotel & Casino Punta Cana";
+        public string Address1 => "Km 28, #74, Bv. Turístico del Este";
+        public string Address2 => "Punta Cana, República Dominicana 23000";
+        public double Latitude => 18.7333722;
+        public double Longitude => -68.4849367;
+        public string HotelPhoneNumber => "+18097310000";
 
         ICommand  navigateCommand;
         public ICommand NavigateCommand =>
@@ -44,7 +45,7 @@ namespace Conference.Clients.Portable
             Logger.Track(ConferenceLoggerKeys.CallHotel);
             try
             {
-                PhoneDialer.Open("14072841234");
+                PhoneDialer.Open(HotelPhoneNumber);
             }
             catch (FeatureNotSupportedException)
             {
