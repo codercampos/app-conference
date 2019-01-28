@@ -54,7 +54,7 @@ namespace Conference.Clients.UI
                                 }
                                 else
                                 {
-                                    items = new[] { "Get Directions", "Call +1 (407) 284-1234" };
+                                    items = new[] { "Get Directions", "Call +1 (809) 731-0000" };
                                 }
                                 var action = await DisplayActionSheet("Hyatt Regency", "Cancel", null, items);
                                 if (action == items[0])
