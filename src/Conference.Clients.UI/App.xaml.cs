@@ -7,6 +7,7 @@ using Conference.Clients.Portable;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Distribute;
 using Microsoft.AppCenter.Crashes;
+using Com.OneSignal;
 
 [assembly:Xamarin.Forms.Xaml.XamlCompilation(Xamarin.Forms.Xaml.XamlCompilationOptions.Compile)]
 
@@ -42,6 +43,8 @@ namespace Conference.Clients.UI
                 default:
                     throw new NotImplementedException();
             }
+
+            OneSignal.Current.StartInit("c233a844-5672-49d8-8440-88c7b8d63233").EndInit();
         }
 
         static ILogger logger;
