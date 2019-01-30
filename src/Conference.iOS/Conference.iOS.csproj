@@ -39,7 +39,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <IpaPackageName>
     </IpaPackageName>
@@ -71,7 +71,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchProfiling>true</MtouchProfiling>
-    <CodesignKey>iPhone Developer: Raul Montero (UYHHL23QG9)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <IpaPackageName>
     </IpaPackageName>
@@ -390,6 +390,9 @@
     </PackageReference>
     <PackageReference Include="ZXing.Net.Mobile.Forms">
       <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Com.OneSignal">
+      <Version>3.2.2</Version>
     </PackageReference>
   </ItemGroup>
 </Project>
