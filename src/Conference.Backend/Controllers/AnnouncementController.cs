@@ -11,7 +11,7 @@ using System.Configuration;
 namespace Conference.Backend.Controllers
 {
     [MobileAppController]
-    public class AnnouncementController : ApiController
+    public class AnnouncementController : BaseController
     {
         // POST api/Announcement
 
@@ -21,8 +21,10 @@ namespace Conference.Backend.Controllers
             HttpStatusCode ret = HttpStatusCode.InternalServerError;
 
             if (string.IsNullOrWhiteSpace(message) || password != ConfigurationManager.AppSettings["NotificationsPassword"])
-                return Request.CreateResponse(ret);
+            return Request.CreateResponse(ret);
 
+            // TODO if this even necessary? When an annoucement is made, should send a push notification?
+            SendToOneSignal(message);
 
             try
             {
